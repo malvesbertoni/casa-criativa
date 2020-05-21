@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<section id="intro">
+    <header>
+        <a href="/">
+            <img src="/logo.png" alt="Imagem da logomarca.">
+        </a>
+    </header>
+    
+    <main>
+        <p>
+            Ficar em casa em períodos longos não é das tarefas mais fáceis.
+        </p>
+
+        <p>
+            Por isso, iremos catalogar diversas ideias <strong>(brincadeiras, 
+            jogos, filmes, cursos, livros, receitas, dicas, etc.)</strong> 
+            para tornar esse momento mais prazeroso.
+        </p>
+
+        <p>
+            Comece clicando em ver ideias para visualizar as ideias
+            que ja foram cadastradas e contribua adicionando as suas ideias.
+        </p>
+    </main>
+    
+    <section id="buttons">
+        <button onclick="onOff()">+ Adicionar Ideia </button>
+        <a href="/ideias" class="button"> Ver Ideias </a>
+    </section>
+
+    <footer>
+        ❤ <a href="https://www.paho.org/bra/index.php?option=com_content&view=article&id=6101:covid19&Itemid=875"
+        target="_blank"> 
+        Fique em casa </a> ❤
+    </footer>
+</section>
+
+<section id="last-ideias">
+    {% include "all_ideas.html" %}
+</section>
+
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% set bodyId = "page-ideias" %}
+
+
+{% block title %}
+    <title>Ideias // Casa Criativa</title>
+{% endblock %}
+
+{% block content %}
+<header>
+    <a href="/">
+        <img src="/logo.png" alt="Imagem da logomarca.">
+    </a>
+
+    <nav>
+        <li><a href="/">Início</a></li>
+        <li><a href="#" class="button" onclick="onOff()">Nova Ideia</a></li>
+    </nav>
+</header>
+
+<section id="title">
+    <p>em exibição</p>
+    <h1>Ideias</h1>
+</section>
+
+<main>
+    <section id="ideias">
+        {% include "all_ideas.html" %}
+    </section>
+</main>
+
+<footer>
+    ❤ <a href="https://www.paho.org/bra/index.php?option=com_content&view=article&id=6101:covid19&Itemid=875"
+    target="_blank">
+    Fique em casa </a> ❤
+</footer>
+{% endblock %}
