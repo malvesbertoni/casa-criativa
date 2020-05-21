@@ -14,11 +14,14 @@ PS. I am aware that the files, and the organization itself, are a bit messy, but
   * Express
 
 ## Demo
-Overview 
+Overview
+
 ![Overview](https://github.com/malvesbertoni/casa-criativa/blob/master/public/overview.gif)
 
 Registering an idea 
+
 ![Register](https://github.com/malvesbertoni/casa-criativa/blob/master/public/register.gif)
 
 Responsiveness
+
 ![Responsive](https://github.com/malvesbertoni/casa-criativa/blob/master/public/responsive.gif)
