@@ -1,3 +1,4 @@
+// Toggles 'on/off' the pop-up screen and scroll
 function onOff(){
     document
         .querySelector("#modal")
@@ -15,6 +16,8 @@ function onOff(){
         .toggle("addScroll")
 } 
 
+// Checks if all of the necessary information was correctly inserted.
+// If there's an error, it'll display an alert message.
 function checkFields(event) {
     const valuesToCheck = [
         "title",
@@ -36,6 +39,6 @@ function checkFields(event) {
 
     if(isEmpty) {
         event.preventDefault()
-        alert("Por favor, preencha todos os campos")
+        alert("Por favor, preencha todos os campos.")
     }
 }

@@ -1,22 +1,21 @@
-// using express to start and setup the server
+// Loading requirements, using express to start and setup the server
 const express = require("express")
 const server = express()
 
 const db = require('./db')
 
-// setup express utilities
-server.use(express.static("public")) // configure static files (css, scripts, imgs)
-server.use(express.urlencoded({ extended: true })) // enables req.body
+// Setup express utilities
+server.use(express.static("public")) // Configure static files (css, scripts, imgs)
+server.use(express.urlencoded({ extended: true })) // Enables req.body
 
-//configure nunjucks
+// Configure nunjucks
 const nunjucks = require("nunjucks")
 nunjucks.configure("views", {
     express: server,
     noCache: true,
 })
 
-// defined '/' route
-// gets client's request and respond
+// Defined '/' get route, gets client's request and respond
 server.get("/", function(req, res) {
 
     db.all(`SELECT * FROM ideas`, function(err, rows){
@@ -38,6 +37,7 @@ server.get("/", function(req, res) {
     })
 })
 
+// Defined '/ideias' get route, shows all ideas
 server.get("/ideias", function(req, res) {
     
     db.all(`SELECT * FROM ideas`, function(err, rows){
@@ -51,6 +51,7 @@ server.get("/ideias", function(req, res) {
     })
 })
 
+// Defined '/' post route, posts a new inserted idea into the db
 server.post("/", function(req, res){
     // Insert data into db 
     const query = `
@@ -81,5 +82,5 @@ server.post("/", function(req, res){
     })
 })
 
-// server listening on port 3000
+// Server listening on port 3000
 server.listen(3000)
